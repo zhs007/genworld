@@ -1,0 +1,2 @@
+# genworld
+generator a world
