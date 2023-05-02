@@ -7,6 +7,7 @@ type Node struct {
 	Info     string   `yaml:"info"`
 	ParentID []string `yaml:"parentID"` // 因为这里可能是多个父节点的，所以下面children也应该用codeid来标识
 	Children []*Node  `yaml:"-"`        // 因为是多对多的，所以有parent就足以定位了，这里的Children是载入后再建立起的数据
+	Status   *Status  `yaml:"status"`
 }
 
 func (node *Node) Each(oneach func(*Node)) {
