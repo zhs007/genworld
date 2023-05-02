@@ -19,14 +19,22 @@ func (mgr *NodeMgr) onLoad() {
 	for _, v := range mgr.Nodes {
 		mgr.addNodeInMap(v)
 
-		v.Each(func(cn *Node) {
+		v.Each(mgr, func(cn *Node) {
 			mgr.addNodeInMap(cn)
 		})
 	}
+
+	mgr.Nodes = nil
 }
 
 func (mgr *NodeMgr) addNodeInMap(node *Node) {
 	mgr.MapNodes[node.CodeID] = node
+}
+
+func (mgr *NodeMgr) Merge(mgr1 *NodeMgr) {
+	for _, v := range mgr1.MapNodes {
+		mgr.addNodeInMap(v)
+	}
 }
 
 func LoadNodeMgr(fn string) (*NodeMgr, error) {

@@ -1,0 +1,4 @@
+nodes: [
+  {name: 灵根, codeID: lingen},
+  {name: 五行灵根, codeID: lingenwx},
+]

@@ -3,6 +3,7 @@ module github.com/zhs007/genworld
 go 1.19
 
 require (
+	github.com/stretchr/testify v1.8.0
 	github.com/zhs007/goutils v0.1.49
 	go.uber.org/zap v1.24.0
 	golang.org/x/text v0.9.0
@@ -11,10 +12,12 @@ require (
 
 require (
 	github.com/buger/jsonparser v1.1.1 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/golang/mock v1.6.0 // indirect
 	github.com/json-iterator/go v1.1.11 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421 // indirect
 	github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 )
